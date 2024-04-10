@@ -1,8 +1,8 @@
 <div class="container">
-  <h1><%= @task.title %></h1>
-  <p><%= @task.details %></p>
-  <p>Completed: <%= @task.completed ? 'Yes' : 'No' %></p>
+  <h1 class="mt-4"><%= @task.title %></h1>
+  <p class="mt-2"><%= @task.details %></p>
+  <p class="mt-2">Completed: <%= @task.completed ? 'Yes' : 'No' %></p>
 
-  <%= link_to 'Edit', edit_task_path(@task), class: 'btn btn-primary' %>
+  <%= link_to 'Edit', edit_task_path(@task), class: 'btn btn-primary me-2' %>
   <%= link_to 'Back to My Tasks', tasks_path, class: 'btn btn-secondary' %>
 </div>

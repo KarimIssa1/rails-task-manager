@@ -1,17 +1,15 @@
-<div class="container mt-3">
-  <h1>My Tasks</h1>
+<div class="container">
+  <h1 class="mt-4">My Tasks</h1>
 
-  <%= link_to new_task_path, class: 'btn btn-primary my-3' do %>
+  <%= link_to new_task_path, class: 'btn btn-primary mt-4' do %>
     <i class="fas fa-plus"></i> Add a Task
   <% end %>
 
-  <div class="list-group">
+  <div class="list-group mt-4">
     <% @tasks.each do |task| %>
       <div class="list-group-item d-flex justify-content-between align-items-center">
-        <div class="flex-grow-1">
-          <%= check_box_tag '', '', task.completed, disabled: true %>
-          <%= link_to task.title, task_path(task), class: 'text-decoration-none' %>
-        </div>
+        <%= check_box_tag 'completed', task.completed, task.completed, class: 'form-check-input me-3' %>
+        <%= link_to task.title, task_path(task), class: 'text-decoration-none flex-grow-1' %>
         <%= link_to task_path(task), method: :delete, data: { turbo_confirm: "Are you sure?", turbo_method: :delete }, class: 'btn btn-danger' do %>
           <i class="fas fa-trash-alt"></i>
         <% end %>

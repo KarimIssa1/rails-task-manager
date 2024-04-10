@@ -14,41 +14,38 @@
  *= require_self
  */
  body {
-  background-color: #f4f4f4;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .container {
-  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .btn-primary {
   background-color: #007bff;
-  color: white;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
 }
 
 .btn-danger {
   background-color: #dc3545;
-  color: white;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
 }
 
 .list-group-item {
-  margin-bottom: 5px;
-  border-radius: 5px;
-}
-a {
-  text-decoration: none;
-  letter-spacing: 0.05em;
+  margin-bottom: 10px;
 }
 
-.text-spacious {
-  letter-spacing: 0.1em;
-}
-
-.list-group-item {
-  padding: 10px 15px;
-}
-
-.btn {
-  margin-right: 5px;
+.list-group-item:last-child {
+  margin-bottom: 0;
 }
